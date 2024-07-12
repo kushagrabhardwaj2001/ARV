@@ -1,6 +1,8 @@
 import React from "react";
 import {  Routes, Route } from "react-router-dom";
 import Home from "./Pages/Home"; 
+import Cbanner from "./Components/Cbanner";
+import Toggle from "./Components/Toggle";
 
 // import Slider from "./Components/Slider";
 // import Home from "./Home"; // Ensure you have a Home component
@@ -16,6 +18,8 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} /> */}
          <Route path="/" element={<Home />} />
+         <Route path="/Toggle" element={<Toggle />} />
+        
          {/* <Route path="/Slider" element={<Slider />} /> */}
       </Routes>
       </React.Fragment>

@@ -1,7 +1,6 @@
 import React from "react";
 import { Box, Image, Text,Button } from "@chakra-ui/react";
 import img1 from "../Images/Focus.png";
-
 function Banner() {
   return (
     <Box
@@ -22,8 +21,8 @@ Request a call
         </Button>
       </Box>
       <Image src={img1} w="32vw" />
+    
     </Box>
   );
 }
-
 export default Banner;

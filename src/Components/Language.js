@@ -12,15 +12,16 @@ import img9 from "../Images/Net.png";
 import img10 from "../Images/Plus.png";
 
 
+
 function Language() {
   return (
     <Box bg="#1D0B8D" h="100vh">
-      <Box display="flex" alignItems="center" justifyContent="center" p={4}>
-        <Box textAlign="center">
+      <Box display="flex" alignItems="center" justifyContent="center" mr={'14%'} p={4}>
+        <Box >
           <Text
             color="white"
             fontSize="80px"
-            fontFamily="Graphik"
+            fontFamily="unset"
             fontStyle="italic"
             fontWeight="bold"
           >
@@ -32,7 +33,7 @@ function Language() {
             <Text> distracted by the readable content of a page when</Text> looking at its layout.
           </Text>
         </Box>
-        <Image src={img1} />
+        <Image src={img1} mt={'2%'} />
       </Box>
       <Grid
       w={'85vw'}
@@ -41,7 +42,8 @@ function Language() {
         templateColumns="repeat(5, 1fr)"
         gap={4}
         p={6}
-        ml={'12%'}
+        ml={'7%'}
+        mt={'-3%'}
       >
         <GridItem rowSpan={2} colSpan={1} bg="white" w={'28vw'} h={'42vh'}>
             <Image src={img2} h={'53vh'}/>
@@ -95,6 +97,8 @@ python
           </Text>
           </GridItem>
       </Grid>
+      <br/>
+    
     </Box>
   );
 }
