@@ -1,55 +1,52 @@
+import React from "react";
 import {
-    Box,
-    Button,
-    Flex,
-    Icon,
-    IconButton,
-    Link,
-    Menu,
-    MenuButton,
-    MenuItem,
-    MenuList,
-    useDisclosure,
-  } from '@chakra-ui/react';
-  import { HamburgerIcon } from '@chakra-ui/icons';
-  
-  function Toggle() {
-    const { isOpen, onOpen, onClose } = useDisclosure();
-  
-    return (
-      <Box py={4} px={4} bg="gray.50" boxShadow="md">
-        <Flex justify="space-between" align="center">
-          <Link to="/" fontSize="lg" fontWeight="bold">
-            Logo
-          </Link>
-          <IconButton
-            icon={<HamburgerIcon />}
-            aria-label="Toggle navigation"
-            onClick={onOpen}
-            display={{ base: 'block', md: 'none' }}
-          />
-          <Menu isOpen={isOpen} onClose={onClose}>
-            <MenuButton
-              as={Button}
-              variant="outline"
-              colorScheme="teal"
-              size="sm"
-              display={{ base: 'none', md: 'block' }}
-            >
-              Menu
-            </MenuButton>
-            <MenuList>
-              <MenuItem as={Link} to="/about">
-                About
-              </MenuItem>
-              <MenuItem as={Link} to="/contact">
-                Contact
-              </MenuItem>
-            </MenuList>
-          </Menu>
-        </Flex>
-      </Box>
-    );
-  }
-  
-  export default Toggle;
+  Box,
+  Flex,
+  HStack,
+  IconButton,
+  useDisclosure,
+  Stack,
+} from "@chakra-ui/react";
+import { HamburgerIcon, CloseIcon } from "@chakra-ui/icons";
+
+const Navbar = () => {
+  const { isOpen, onOpen, onClose } = useDisclosure();
+
+  return (
+    <Box bg="gray.100" px={4} display={{lg:'none'}}>
+      <Flex h={16} alignItems="center" justifyContent="space-between" >
+        <Box color="black">Logo</Box>
+        <IconButton
+          size="md"
+          icon={isOpen ? <CloseIcon /> : <HamburgerIcon />}
+          aria-label="Toggle Menu"
+          display={{ md: "none"   }}
+          onClick={isOpen ? onClose : onOpen}
+        />  
+        <HStack spacing={8} alignItems="center">
+          <HStack
+            as="nav"
+            spacing={4}
+            display={{ base: "none", md: "flex",lg:"none" }}
+          >
+            <Box>Home</Box>
+            <Box>About</Box>
+            <Box>Contact</Box>
+          </HStack>
+        </HStack>
+      </Flex>
+
+      {isOpen && (
+        <Box pb={4} display={{ md: "none" }}>
+          <Stack as="nav" spacing={4}>
+            <Box>Home</Box>
+            <Box>About</Box>
+            <Box>Contact</Box>
+          </Stack>
+        </Box>
+      )}
+    </Box>
+  );
+};
+
+export default Navbar;

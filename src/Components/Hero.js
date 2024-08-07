@@ -1,6 +1,5 @@
 import React from "react";
 import {
-  ChakraProvider,
   Box,
   Flex,
   Link,
@@ -11,11 +10,14 @@ import {
   Text,
 } from "@chakra-ui/react";
 import { MoonIcon } from "@chakra-ui/icons";
+import Ball from "../Components/Ball"
+import Ball2 from "../Components/Ball2"
 import img1 from "../Images/ARV.png";
 import img2 from "../Images/design.png";
 import img3 from "../Images/Intel.webp";
 import img4 from "../Images/h1.png";
 import img5 from "../Images/h2.png";
+import Toggle from "../Components/Toggle";
 
 function Header() {
   const { colorMode, toggleColorMode } = useColorMode();
@@ -30,31 +32,31 @@ function Header() {
         h="70%"
         zIndex={0}
       />
-      <Box bgGradient="linear(#424571, #12153A)" h="100vh" w="50vw">
-        <Flex
-          h={16}
-          alignItems="center"
-          justifyContent="space-around"
-          w="99vw"
-        >
-          <Box display="flex" alignItems="center "> 
+      <Toggle />
+      <Box
+        bgGradient="linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(16,19,69,1) 100%)"
+        h="100vh"
+        w={{ base: "100vw", md: "80vw" }}
+        display={{ base: "none", lg: "flex" }}
+      >
+     <Flex h={16} alignItems="center" justifyContent="center" w="100vw">
+          <Box display="flex" alignItems="center" mr={'20%'}>
             <Image src={img1} alt="ARV Multimedia" h={10} />
           </Box>
           <Flex alignItems="center">
-            <Link href="#" color="yellow.400" m="30px" fontSize="15px">
+            <Link href="#" color="yellow.400" mx={4} fontSize="15px">
               Home
             </Link>
-            <Link href="#" color="white" m="30px" fontSize="15px">
+            <Link href="#" color="white" mx={4} fontSize="15px">
               About us
             </Link>
-            <Link href="#" color="white" m="30px" fontSize="15px">
+            <Link href="#" color="white" mx={4} fontSize="15px">
               Technologies
             </Link>
-            <Box>
+            <Box mx={4}>
               <Button
                 as="div"
                 color="white"
-                m="30px"
                 bg="blue.900"
                 _hover={{ bg: "blue.700" }}
               >
@@ -63,7 +65,7 @@ function Header() {
               {/* Dropdown content can be added here */}
             </Box>
             <Spacer />
-            <Button bg="#FED404" m="30px">
+            <Button bg="#FED404" mx={4}>
               Contact us
             </Button>
             <Button onClick={toggleColorMode} ml={4}>
@@ -71,11 +73,9 @@ function Header() {
             </Button>
           </Flex>
         </Flex>
-
-        <Box></Box>
       </Box>
-      <Flex alignItems="center" justifyContent="center" mt="-50%">
-        <Box p={4} w="52vw">
+      <Flex alignItems="center" justifyContent="center" mt={{ base: "0", lg: "-50%" }}>
+        <Box p={4} w={{ base: "90vw", md: "52vw" }}>
           <Text
             fontSize="70px"
             fontFamily="Graphik"
@@ -89,13 +89,17 @@ function Header() {
           </Text>
           <Text color="#FFCA9D" fontSize="18px" textAlign="center">
             It is a long established fact that a reader will be distracted by the <br />readable content of a page when looking at its layout.
+            
           </Text>
+        
         </Box>
+        <Ball/>
       </Flex>
       <Box display="flex" alignItems="center" justifyContent="center">
         <Image src={img4} h="61vh" w="9vw" m="2" />
         <Image src={img3} h="61vh" w="58vw" />
-        <Image src={img5} h="61vh" w="9vw" m="2"/>
+        <Image src={img5} h="61vh" w="9vw" m="2" />
+       <Ball2 />
       </Box>
     </Box>
   );
