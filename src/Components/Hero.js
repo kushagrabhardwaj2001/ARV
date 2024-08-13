@@ -23,7 +23,7 @@ function Header() {
   const { colorMode, toggleColorMode } = useColorMode();
 
   return (
-    <Box bg="#424571" h="100vh" position="relative">
+    <Box bg="rgb(59,64,130)" h="100vh" position="relative">
       <Image
         src={img2}
         alt="Background"
@@ -34,9 +34,9 @@ function Header() {
       />
       <Toggle />
       <Box
-        bgGradient="linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(16,19,69,1) 100%)"
+        bgGradient="linear-gradient(90deg, rgba(18,21,58,1) 0%, rgba(66,69,113,1) 100%)"
         h="100vh"
-        w={{ base: "100vw", md: "80vw" }}
+        w={{ base: "100vw", md: "70vw" }}
         display={{ base: "none", lg: "flex" }}
       >
      <Flex h={16} alignItems="center" justifyContent="center" w="100vw">

@@ -9,10 +9,44 @@ import img1 from "../Images/imgae.png"; // Ensure the correct path
 import img2 from "../Images/Image2.png"; // Ensure the correct path
 import img3 from "../Images/Image3.png"; // Ensure the correct path
 import img4 from "../Images/Image4.png"; // Ensure the correct path
+import Ball2 from "../Components/Ball2";
+import img5 from "../Images/image 33.png";
 
 const Cbanner = () => {
   return (
     <Box bg={'#1D0B8D'} p={4}>
+      <Box display={'flex'}> 
+       
+        <Box alignItems={'center'} alignContent={'center'}  w={'100%'}>
+        <Ball2 mar/>
+        <Text
+  textAlign="center"
+  color="white"
+  fontFamily="Playfair Display"
+  fontWeight="700"
+  fontSize="60px"
+>
+  Case{" "}
+  <Box
+    as="span"
+    bgGradient="linear(to-r, #EAFA1F 40%, #3BC6CA 100%)"
+    bgClip="text"
+  >
+    Study
+  </Box>
+</Text>
+<Text textAlign={'center'} color={'#FFCA9D'} fontFamily={'Graphik'} fontWeight={'500'} fontSize={'20px'}>
+It is a long established fact that a reader will be distracted 
+by the <Text> readable content of a page when looking at its layout.</Text>
+</Text>
+
+
+        </Box>
+        <Box  color={'white'}  >
+<Image src={img5}/>
+        </Box>
+        </Box>
+       
       <Flex wrap="wrap" justifyContent="Center">
       <Box
           position="relative"
@@ -33,6 +67,7 @@ const Cbanner = () => {
             },
           }}
         >
+        
           <Box
             className="image-overlay"
             position="relative"
@@ -40,6 +75,7 @@ const Cbanner = () => {
             h="100%"
             overflow="hidden"
             borderRadius="md"
+           
           >
             <Image
               src={img1}
@@ -293,3 +329,4 @@ sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
 };
 
 export default Cbanner;
+

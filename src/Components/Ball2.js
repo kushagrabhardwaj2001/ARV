@@ -24,8 +24,8 @@ const Ball = () => {
       animation={`${moveUpAndDown} 2s ease-in-out infinite`}
       // Style the ball
       bg="linear-gradient(180deg, rgba(236,99,217,1) 0%, rgba(255,190,0,1) 100%)"
-      w="80px"
-      h="80px"
+      w="100px"
+      h="100px"
       borderRadius="full"
     />
     

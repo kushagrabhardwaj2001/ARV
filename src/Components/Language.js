@@ -15,25 +15,25 @@ import img10 from "../Images/Plus.png";
 
 function Language() {
   return (
-    <Box bg="#1D0B8D" h="100vh">
-      <Box display="flex" alignItems="center" justifyContent="center" mr={'14%'} p={4}>
+    <Box bg="#1D0B8D" h="70vh">
+      <Box display="flex" alignItems="center" justifyContent="center" mr={'9%'} p={4}>
         <Box >
           <Text
             color="white"
-            fontSize="80px"
-            fontFamily="unset"
-            fontStyle="italic"
-            fontWeight="bold"
+            fontSize="50px"
+            fontFamily="Imperial"
+           fontWeight={'800'}
+            
           >
-            Lorem ipsum
-            <Text mt="-8%">amet, consecte</Text>
+            What <Text as="span" color="rgb(234,250,31)">service</Text> we give
+          
           </Text>
           <Text fontSize="22px" color="#FFCA9D">
-            It is a long established fact that a reader will be{" "}
-            <Text> distracted by the readable content of a page when</Text> looking at its layout.
+            It is a long established fact that a reader will be distracted by the
+            <Text>  readable content of a page when looking at its layout.</Text> 
           </Text>
         </Box>
-        <Image src={img1} mt={'2%'} />
+        <Image src={img1} mt={'-5%'} />
       </Box>
       <Grid
       w={'85vw'}
