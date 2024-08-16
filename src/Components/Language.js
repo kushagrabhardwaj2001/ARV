@@ -93,7 +93,7 @@ python
           <GridItem colSpan={1} bg="white" display="flex" flexDirection="column" alignItems="center" justifyContent="center">
           <Image src={img10} h="5vh" />
           <Text mt={2} fontFamily={'Graphik'} fontSize={'18px'} fontWeight={'700'}>
-            All all
+            All 
           </Text>
           </GridItem>
       </Grid>

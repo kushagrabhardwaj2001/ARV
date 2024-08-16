@@ -4,6 +4,7 @@ import {
   Image,
   Text,
   Flex,
+  keyframes,
 } from '@chakra-ui/react';
 import img1 from "../Images/imgae.png"; // Ensure the correct path
 import img2 from "../Images/Image2.png"; // Ensure the correct path
@@ -11,6 +12,20 @@ import img3 from "../Images/Image3.png"; // Ensure the correct path
 import img4 from "../Images/Image4.png"; // Ensure the correct path
 import Ball2 from "../Components/Ball2";
 import img5 from "../Images/image 33.png";
+import Books from "../Components/Books";
+
+const moveUpAndDown = keyframes`
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+`;
+
 
 const Cbanner = () => {
   return (
@@ -43,7 +58,7 @@ by the <Text> readable content of a page when looking at its layout.</Text>
 
         </Box>
         <Box  color={'white'}  >
-<Image src={img5}/>
+<Books/>
         </Box>
         </Box>
        
