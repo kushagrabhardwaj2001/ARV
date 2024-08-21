@@ -23,14 +23,14 @@ function Header() {
   const { colorMode, toggleColorMode } = useColorMode();
 
   return (
-    <Box bg="rgb(59,64,130)" h="100vh" position="relative">
+    <Box bg="rgb(59,64,130)" h={{base: "44vh", sm :'20px' , md: "52vw" ,lg:'70px' , xl:'100vh' }} position="relative">
       <Image
         src={img2}
         alt="Background"
         position="absolute"
         w="24%"
         h="70%"
-        zIndex={0}
+        
       />
       <Toggle />
       <Box
@@ -74,20 +74,22 @@ function Header() {
           </Flex>
         </Flex>
       </Box>
-      <Flex alignItems="center" justifyContent="center" mt={{ base: "0", lg: "-50%" }}>
-        <Box p={4} w={{ base: "90vw", md: "52vw" }}>
+      <Flex alignItems="center" justifyContent="center"   mt={{ base: "0", sm: "0", md: "23%", lg: "-25%", xl: "-50%" }}
+      >
+        <Box p={4} w={{ base: "90vw", sm :'' , md: "52vw" ,lg:'' , xl:'100vw'  }} mt={{ base: "0", sm: "0", md: "23%", lg: "-25%", xl: "6%" }} >
           <Text
-            fontSize="70px"
+            fontSize={{base: "18px", sm :'20px' , md: "52vw" ,lg:'70px' , xl:'70px' }}
             fontFamily="Graphik"
             fontStyle="italic"
             fontWeight="bold"
             color="#FFFFFF"
-            textAlign="center"
+            textAlign={{base: "center", sm :'20px' , md: "52vw" ,lg:'70px' , xl:'center' }}
           >
+           
             Lorem ipsum dolor sit amet,
-            <Text mt="-4%"> consectetur</Text>
+            <Text mt="-4%" color="rgb(255,255,80)"> consectetur</Text>
           </Text>
-          <Text color="#FFCA9D" fontSize="18px" textAlign="center">
+          <Text color="#FFCA9D" fontSize={{base: "6px", sm :'20px' , md: "52vw" ,lg:'70px' , xl:'18px' }} textAlign="center">
             It is a long established fact that a reader will be distracted by the <br />readable content of a page when looking at its layout.
             
           </Text>
@@ -96,9 +98,9 @@ function Header() {
         <Ball/>
       </Flex>
       <Box display="flex" alignItems="center" justifyContent="center">
-        <Image src={img4} h="61vh" w="9vw" m="2" />
-        <Image src={img3} h="61vh" w="58vw" />
-        <Image src={img5} h="61vh" w="9vw" m="2" />
+        <Image src={img4} h={{base: "20vh", sm :'20px' , md: "52vw" ,lg:'70px' , xl:'61vh' }} w="9vw" m="2" />
+        <Image src={img3} h={{base: "22vh", sm :'20px' , md: "52vw" ,lg:'70px' , xl:'61vh' }} w="58vw" />
+        <Image src={img5} h={{base: "20vh", sm :'20px' , md: "52vw" ,lg:'70px' , xl:'61vh' }} w="9vw" m="2" />
        <Ball2 />
       </Box>
     </Box>
